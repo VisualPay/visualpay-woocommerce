@@ -1,0 +1,161 @@
+# Copyright (C) 2026 VisualPay
+# This file is distributed under the same license as the VisualPay for WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: VisualPay for WooCommerce 1.0.1\n"
+"Report-Msgid-Bugs-To: https://visualpay.net\n"
+"POT-Creation-Date: 2026-09-01 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: visualpay-for-woocommerce\n"
+
+msgid "VisualPay for WooCommerce requires WooCommerce to be installed and active."
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "VisualPay"
+msgstr ""
+
+msgid "Overview"
+msgstr ""
+
+msgid "Transactions"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Failed to load order details."
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Testing..."
+msgstr ""
+
+msgid "Test"
+msgstr ""
+
+msgid "Success"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Test completed successfully. Plugin connected to VisualPay."
+msgstr ""
+
+msgid "Test failed. Plugin could not connect to VisualPay."
+msgstr ""
+
+msgid "VisualPay plugin enabled"
+msgstr ""
+
+msgid "VisualPay plugin disabled."
+msgstr ""
+
+msgid "Failed to update status."
+msgstr ""
+
+msgid "Settings saved."
+msgstr ""
+
+msgid "Copied to clipboard."
+msgstr ""
+
+msgid "Copy failed."
+msgstr ""
+
+msgid "x-api-key is required."
+msgstr ""
+
+msgid "Transaction TTL must be between 5 and 60."
+msgstr ""
+
+msgid "Configure your WooCommerce payment gateway"
+msgstr ""
+
+msgid "Plugin status : Active"
+msgstr ""
+
+msgid "Plugin status : Inactive"
+msgstr ""
+
+msgid "Toggle plugin status"
+msgstr ""
+
+msgid "x-api-key"
+msgstr ""
+
+msgid "Paste merchant API key"
+msgstr ""
+
+msgid "Show API key"
+msgstr ""
+
+msgid "Hide API key"
+msgstr ""
+
+msgid "Transaction TTL"
+msgstr ""
+
+msgid "(minutes)"
+msgstr ""
+
+msgid "The entered value is measured in minutes. From the time payment starts, the customer will have this many minutes to pay the invoice."
+msgstr ""
+
+msgid "Checkout title"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Language used on the customer payment page. Default is English."
+msgstr ""
+
+msgid "Checkout description"
+msgstr ""
+
+msgid "Save settings"
+msgstr ""
+
+msgid "Accept crypto payments via VisualPay Merchant API."
+msgstr ""
+
+msgid "Cryptocurrency"
+msgstr ""
+
+msgid "Enable/Disable"
+msgstr ""
+
+msgid "Enable VisualPay Cryptocurrency payments"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Payment method title shown at checkout."
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Payment method description shown at checkout."
+msgstr ""
+
+msgid "Pay securely with cryptocurrency via VisualPay."
+msgstr ""
+
+msgid "API settings"
+msgstr ""
+
+msgid "Configure your merchant API key under %s."
+msgstr ""
+
+msgid "VisualPay → Settings"
+msgstr ""

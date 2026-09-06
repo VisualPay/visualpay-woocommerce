@@ -1,0 +1,26 @@
+Third-party libraries bundled with VisualPay for WooCommerce
+============================================================
+
+Bootstrap 5 (CSS + JS bundle)
+- Files: assets/vendor/bootstrap.min.css, assets/vendor/bootstrap.bundle.min.js
+- Version: 5.3.8
+- License: MIT
+- Source: https://github.com/twbs/bootstrap
+
+Bootstrap Icons
+- Files: assets/vendor/bootstrap-icons/
+- License: MIT
+- Source: https://github.com/twbs/icons
+
+qrcode (node-qrcode)
+- File: assets/vendor/qrcode.min.js
+- Version: 1.5.4
+- License: MIT
+- Source: https://github.com/soldair/node-qrcode
+
+Plugin-authored JavaScript and CSS (assets/js/*.js, assets/css/*.css) are
+shipped unminified and human-readable under the same license as this plugin
+(GPLv2 or later).
+
+Minified third-party vendor files above are included for runtime performance.
+Unminified / original sources are available at the repository URLs listed.

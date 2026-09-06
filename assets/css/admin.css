@@ -1,0 +1,2616 @@
+.visualpay-admin .visualpay-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin: 20px 0 28px;
+}
+
+.visualpay-admin .visualpay-card {
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 8px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.visualpay-admin .visualpay-card-label {
+  color: #646970;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.visualpay-admin .visualpay-card-value {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1d2327;
+}
+
+.visualpay-admin .visualpay-card-hint {
+  margin-top: 6px;
+  color: #8c8f94;
+  font-size: 12px;
+}
+
+.visualpay-admin .visualpay-card.is-pending .visualpay-card-value { color: #dba617; }
+.visualpay-admin .visualpay-card.is-confirmed .visualpay-card-value { color: #00a32a; }
+.visualpay-admin .visualpay-card.is-cancelled .visualpay-card-value { color: #d63638; }
+
+.visualpay-admin .visualpay-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.visualpay-admin .visualpay-panel {
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 8px;
+  padding: 16px 18px 20px;
+}
+
+.visualpay-admin .visualpay-panel h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.visualpay-admin .visualpay-error {
+  color: #d63638;
+}
+
+.visualpay-admin .visualpay-settings-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 22px;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.visualpay-admin .visualpay-settings-columns > .visualpay-settings-row {
+  margin: 0;
+  height: 100%;
+  max-width: none;
+}
+
+.visualpay-admin .visualpay-settings-form {
+  width: 100%;
+  max-width: none;
+}
+
+.visualpay-admin .visualpay-settings-form .visualpay-settings-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 28px;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 22px;
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.visualpay-admin .visualpay-settings-form .visualpay-settings-row--stack {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.visualpay-admin .visualpay-settings-field {
+  min-width: 0;
+}
+
+.visualpay-admin .visualpay-settings-col {
+  min-width: 0;
+}
+
+.visualpay-admin .visualpay-settings-col--full {
+  grid-column: 1 / -1;
+}
+
+.visualpay-admin .visualpay-settings-label {
+  display: block;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #1d2327;
+}
+
+.visualpay-admin .visualpay-required {
+  color: #d63638;
+  margin-left: 2px;
+}
+
+.visualpay-admin .visualpay-settings-col .regular-text {
+  width: 100%;
+  max-width: 100%;
+}
+
+.visualpay-admin .visualpay-settings-col .large-text {
+  width: 100%;
+  max-width: 100%;
+}
+
+.visualpay-admin .visualpay-password-field {
+  position: relative;
+}
+
+.visualpay-admin .visualpay-password-field .regular-text {
+  padding-right: 42px;
+}
+
+.visualpay-admin .visualpay-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #646970;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.visualpay-admin .visualpay-password-toggle:hover,
+.visualpay-admin .visualpay-password-toggle:focus {
+  color: #2271b1;
+  background: #f0f0f1;
+  outline: none;
+  box-shadow: none;
+}
+
+.visualpay-admin .visualpay-password-toggle .dashicons {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.visualpay-admin .visualpay-radio {
+  display: block;
+  margin: 0 0 8px;
+  line-height: 1.45;
+}
+
+.visualpay-admin .visualpay-radio:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 782px) {
+  .visualpay-admin .visualpay-settings-columns,
+  .visualpay-admin .visualpay-settings-form .visualpay-settings-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.visualpay-admin .visualpay-search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0 8px;
+}
+
+.visualpay-admin .visualpay-status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: lowercase;
+  background: #f0f0f1;
+}
+
+.visualpay-admin .visualpay-status--pending { background: #fcf9e8; color: #996800; }
+.visualpay-admin .visualpay-status--confirmed { background: #edfaef; color: #007017; }
+.visualpay-admin .visualpay-status--cancelled,
+.visualpay-admin .visualpay-status--expired { background: #fcf0f1; color: #b32d2e; }
+
+.visualpay-admin .visualpay-transactions tbody tr {
+  cursor: pointer;
+}
+
+.visualpay-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: none;
+  --vp-bg: #0a0b0d;
+  --vp-bg-panel: #121418;
+  --vp-bg-card: #17191e;
+  --vp-border: #24272d;
+  --vp-border-soft: #1c1f25;
+  --vp-text: #f2f3f5;
+  --vp-text-dim: #9098a3;
+  --vp-text-faint: #565c66;
+  --vp-accent: #f5a623;
+  --vp-accent-soft: rgba(245, 166, 35, 0.12);
+  --vp-accent-glow: rgba(245, 166, 35, 0.35);
+  --vp-green: #34d399;
+  --vp-radius: 14px;
+}
+
+.visualpay-modal.is-open {
+  display: block;
+}
+
+.visualpay-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 5, 7, 0.72);
+  backdrop-filter: blur(2px);
+}
+
+.visualpay-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(640px, calc(100% - 32px));
+  max-height: calc(100% - 64px);
+  overflow: auto;
+  margin: 32px auto;
+  background: var(--vp-bg-panel);
+  color: var(--vp-text);
+  border: 1px solid var(--vp-border);
+  border-radius: var(--vp-radius);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.visualpay-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--vp-border);
+  background: var(--vp-bg-card);
+}
+
+.visualpay-modal__header h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--vp-text);
+}
+
+.visualpay-modal__close {
+  border: 1px solid var(--vp-border);
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--vp-text-dim);
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.visualpay-modal__close:hover,
+.visualpay-modal__close:focus {
+  border-color: var(--vp-accent);
+  color: var(--vp-accent);
+  background: var(--vp-accent-soft);
+  outline: none;
+}
+
+.visualpay-modal__body {
+  padding: 20px;
+}
+
+.visualpay-modal__body h3 {
+  margin: 20px 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--vp-text-dim);
+}
+
+.visualpay-modal__body h3:first-child {
+  margin-top: 0;
+}
+
+.visualpay-modal__body p {
+  margin: 0;
+  color: var(--vp-text-dim);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.visualpay-modal__body table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.visualpay-modal__body th,
+.visualpay-modal__body td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--vp-border-soft);
+  vertical-align: top;
+  font-size: 13px;
+}
+
+.visualpay-modal__body tr:last-child th,
+.visualpay-modal__body tr:last-child td {
+  border-bottom: 0;
+}
+
+.visualpay-modal__body th {
+  width: 35%;
+  color: var(--vp-text-faint);
+  font-weight: 600;
+}
+
+.visualpay-modal__body td {
+  color: var(--vp-text);
+}
+
+.visualpay-modal__body a {
+  color: var(--vp-accent);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.visualpay-modal__body a:hover {
+  text-decoration: underline;
+}
+
+.visualpay-modal__body code {
+  display: inline-block;
+  max-width: 100%;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: var(--vp-bg-card);
+  border: 1px solid var(--vp-border);
+  color: var(--vp-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.visualpay-modal__copy-cell {
+  max-width: 100%;
+}
+
+.visualpay-modal__copy-cell a {
+  word-break: break-all;
+}
+
+.visualpay-modal__body thead th {
+  width: auto;
+  color: var(--vp-text-dim);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--vp-border);
+}
+
+.visualpay-modal__actions {
+  margin-top: 18px;
+}
+
+.visualpay-modal__action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1px solid var(--vp-accent);
+  border-radius: 8px;
+  background: var(--vp-accent-soft);
+  color: var(--vp-accent);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.visualpay-modal__action-btn:hover {
+  background: rgba(245, 166, 35, 0.22);
+  color: var(--vp-accent);
+}
+
+/* Overview dashboard */
+/* Kill horizontal page overflow only (WP float+100% width / wrap margins). Vertical scroll untouched. */
+body.visualpay-admin-overview-screen #wpcontent {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+
+body.visualpay-admin-overview-screen #wpbody-content {
+  float: none;
+  width: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.visualpay-overview.wrap {
+  margin-top: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  width: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.visualpay-overview,
+.visualpay-settings-page,
+.visualpay-transactions-page {
+  --vp-bg: #0a0b0d;
+  --vp-bg-panel: #121418;
+  --vp-bg-card: #17191e;
+  --vp-border: #24272d;
+  --vp-border-soft: #1c1f25;
+  --vp-text: #f2f3f5;
+  --vp-text-dim: #9098a3;
+  --vp-text-faint: #565c66;
+  --vp-accent: #f5a623;
+  --vp-accent-soft: rgba(245, 166, 35, 0.12);
+  --vp-accent-glow: rgba(245, 166, 35, 0.35);
+  --vp-green: #34d399;
+  --vp-green-soft: rgba(52, 211, 153, 0.12);
+  --vp-red: #f2545b;
+  --vp-red-soft: rgba(242, 84, 91, 0.12);
+  --vp-yellow: #eab308;
+  --vp-yellow-soft: rgba(234, 179, 8, 0.12);
+  --vp-gray: #8b93a1;
+  --vp-gray-soft: rgba(139, 147, 161, 0.12);
+  --vp-bg-row-alt: #14161a;
+  --vp-flat-bg: rgba(255, 255, 255, 0.04);
+  --vp-radius: 14px;
+}
+
+/* Dark scrollbars matching plugin theme */
+.visualpay-overview,
+.visualpay-settings-page,
+.visualpay-transactions-page,
+.visualpay-overview *,
+.visualpay-settings-page *,
+.visualpay-transactions-page *,
+body.visualpay-admin-overview-screen,
+body.visualpay-admin-settings-screen,
+body.visualpay-admin-transactions-screen {
+  scrollbar-width: thin;
+  scrollbar-color: #3a3f48 #121418;
+}
+
+.visualpay-overview ::-webkit-scrollbar,
+.visualpay-settings-page ::-webkit-scrollbar,
+.visualpay-transactions-page ::-webkit-scrollbar,
+body.visualpay-admin-overview-screen ::-webkit-scrollbar,
+body.visualpay-admin-settings-screen ::-webkit-scrollbar,
+body.visualpay-admin-transactions-screen ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.visualpay-overview ::-webkit-scrollbar-track,
+.visualpay-settings-page ::-webkit-scrollbar-track,
+.visualpay-transactions-page ::-webkit-scrollbar-track,
+body.visualpay-admin-overview-screen ::-webkit-scrollbar-track,
+body.visualpay-admin-settings-screen ::-webkit-scrollbar-track,
+body.visualpay-admin-transactions-screen ::-webkit-scrollbar-track {
+  background: #121418;
+  border-radius: 999px;
+}
+
+.visualpay-overview ::-webkit-scrollbar-thumb,
+.visualpay-settings-page ::-webkit-scrollbar-thumb,
+.visualpay-transactions-page ::-webkit-scrollbar-thumb,
+body.visualpay-admin-overview-screen ::-webkit-scrollbar-thumb,
+body.visualpay-admin-settings-screen ::-webkit-scrollbar-thumb,
+body.visualpay-admin-transactions-screen ::-webkit-scrollbar-thumb {
+  background: #3a3f48;
+  border-radius: 999px;
+  border: 2px solid #121418;
+}
+
+.visualpay-overview ::-webkit-scrollbar-thumb:hover,
+.visualpay-settings-page ::-webkit-scrollbar-thumb:hover,
+.visualpay-transactions-page ::-webkit-scrollbar-thumb:hover,
+body.visualpay-admin-overview-screen ::-webkit-scrollbar-thumb:hover,
+body.visualpay-admin-settings-screen ::-webkit-scrollbar-thumb:hover,
+body.visualpay-admin-transactions-screen ::-webkit-scrollbar-thumb:hover {
+  background: #4a505c;
+}
+
+.visualpay-overview ::-webkit-scrollbar-corner,
+.visualpay-settings-page ::-webkit-scrollbar-corner,
+.visualpay-transactions-page ::-webkit-scrollbar-corner,
+body.visualpay-admin-overview-screen ::-webkit-scrollbar-corner,
+body.visualpay-admin-settings-screen ::-webkit-scrollbar-corner,
+body.visualpay-admin-transactions-screen ::-webkit-scrollbar-corner {
+  background: #121418;
+}
+
+.visualpay-overview .visualpay-dashboard {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  background: radial-gradient(ellipse 70% 45% at 85% -10%, rgba(245, 166, 35, 0.06), transparent 60%), var(--vp-bg);
+  color: var(--vp-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  border-radius: var(--vp-radius);
+  padding: 28px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.visualpay-overview .mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.visualpay-overview .visualpay-dashboard__topbar,
+.visualpay-settings-page .visualpay-dashboard__topbar,
+.visualpay-transactions-page .visualpay-dashboard__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+.visualpay-overview .visualpay-dashboard__brand,
+.visualpay-settings-page .visualpay-dashboard__brand,
+.visualpay-transactions-page .visualpay-dashboard__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.visualpay-overview .visualpay-dashboard__mark,
+.visualpay-settings-page .visualpay-dashboard__mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--vp-bg-card);
+  border: 1px solid var(--vp-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--vp-text-dim);
+  font-size: 16px;
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
+.visualpay-overview .visualpay-dashboard__mark .dashicons,
+.visualpay-settings-page .visualpay-dashboard__mark .dashicons,
+.visualpay-transactions-page .visualpay-dashboard__mark .dashicons {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--vp-text-dim);
+}
+
+.visualpay-overview .visualpay-dashboard__mark-logo {
+  width: 22px;
+  height: 22px;
+  display: block;
+  object-fit: contain;
+}
+
+.visualpay-overview .visualpay-dashboard__brand-text h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--vp-text);
+  line-height: 1.3;
+}
+
+.visualpay-overview .visualpay-dashboard__brand-text span {
+  font-size: 12px;
+  color: var(--vp-text-dim);
+}
+
+.visualpay-overview .visualpay-dashboard__topbar-right,
+.visualpay-settings-page .visualpay-dashboard__topbar-right,
+.visualpay-transactions-page .visualpay-dashboard__topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.visualpay-overview .visualpay-dashboard__pill,
+.visualpay-settings-page .visualpay-dashboard__pill,
+.visualpay-transactions-page .visualpay-dashboard__pill {
+  font-size: 12px;
+  color: var(--vp-text-dim);
+  background: var(--vp-bg-card);
+  border: 1px solid var(--vp-border);
+  padding: 7px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.visualpay-overview .visualpay-dashboard__pill.is-disconnected,
+.visualpay-settings-page .visualpay-dashboard__pill.is-inactive,
+.visualpay-transactions-page .visualpay-dashboard__pill.is-disconnected {
+  color: var(--vp-red);
+  border-color: rgba(242, 84, 91, 0.35);
+  background: var(--vp-red-soft);
+}
+
+.visualpay-overview .visualpay-dashboard__pill-dot,
+.visualpay-settings-page .visualpay-dashboard__pill-dot,
+.visualpay-transactions-page .visualpay-dashboard__pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--vp-green);
+  box-shadow: 0 0 8px var(--vp-green);
+  flex-shrink: 0;
+  animation: visualpay-pill-blink 1.4s ease-in-out infinite;
+}
+
+.visualpay-overview .visualpay-dashboard__pill.is-disconnected .visualpay-dashboard__pill-dot,
+.visualpay-settings-page .visualpay-dashboard__pill.is-inactive .visualpay-dashboard__pill-dot,
+.visualpay-transactions-page .visualpay-dashboard__pill.is-disconnected .visualpay-dashboard__pill-dot {
+  background: var(--vp-red);
+  box-shadow: 0 0 8px var(--vp-red);
+  animation-name: visualpay-pill-blink-red;
+}
+
+@keyframes visualpay-pill-blink {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 8px var(--vp-green);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    box-shadow: 0 0 2px var(--vp-green);
+    transform: scale(0.85);
+  }
+}
+
+@keyframes visualpay-pill-blink-red {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 8px var(--vp-red);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    box-shadow: 0 0 2px var(--vp-red);
+    transform: scale(0.85);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visualpay-overview .visualpay-dashboard__pill-dot,
+  .visualpay-settings-page .visualpay-dashboard__pill-dot,
+  .visualpay-transactions-page .visualpay-dashboard__pill-dot {
+    animation: none;
+  }
+}
+
+.visualpay-overview .visualpay-dashboard__section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 30px 0 14px;
+  flex-wrap: wrap;
+}
+
+.visualpay-overview .visualpay-dashboard__section-head h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--vp-text);
+}
+
+.visualpay-overview .visualpay-dashboard__section-head p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--vp-text-faint);
+}
+
+.visualpay-overview .visualpay-dashboard__panel,
+.visualpay-overview .visualpay-dashboard__chart-card {
+  background: var(--vp-bg-panel);
+  border: 1px solid var(--vp-border);
+  border-radius: var(--vp-radius);
+  padding: 18px 20px;
+}
+
+.visualpay-overview .visualpay-dashboard__chart-card {
+  padding-bottom: 8px;
+  overflow: hidden;
+}
+
+.visualpay-overview .visualpay-dashboard__chart-svg {
+  width: 100%;
+  max-width: 100%;
+  height: 220px;
+  display: block;
+}
+
+.visualpay-overview .visualpay-dashboard__chart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.visualpay-overview .visualpay-dashboard__chart-head h2 {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--vp-text);
+}
+
+.visualpay-overview .visualpay-dashboard__chart-total {
+  font-size: 12px;
+  color: var(--vp-text-dim);
+}
+
+.visualpay-overview .visualpay-dashboard__chart-total b {
+  color: var(--vp-accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.visualpay-overview .visualpay-dashboard__grid-line {
+  stroke: var(--vp-border-soft);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+
+.visualpay-overview .visualpay-dashboard__grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+}
+
+.visualpay-overview .visualpay-dashboard__stat-card {
+  background: var(--vp-bg-panel);
+  border: 1px solid var(--vp-border);
+  border-radius: var(--vp-radius);
+  padding: 18px 18px 16px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.visualpay-overview .visualpay-dashboard__stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.visualpay-overview .visualpay-dashboard__stat-label {
+  font-size: 11.5px;
+  color: var(--vp-text-dim);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.visualpay-overview .visualpay-dashboard__stat-value {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--vp-text);
+  overflow-wrap: anywhere;
+}
+
+.visualpay-overview .visualpay-dashboard__growth {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.visualpay-overview .visualpay-dashboard__growth.is-up {
+  color: var(--vp-green);
+  background: var(--vp-green-soft);
+}
+
+.visualpay-overview .visualpay-dashboard__growth.is-down {
+  color: var(--vp-red);
+  background: var(--vp-red-soft);
+}
+
+.visualpay-overview .visualpay-dashboard__growth.is-flat {
+  color: var(--vp-text-dim);
+  background: var(--vp-flat-bg);
+}
+
+.visualpay-overview .visualpay-dashboard__status-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--vp-border);
+  flex-wrap: wrap;
+}
+
+.visualpay-overview .visualpay-dashboard__status-row--flat {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 10px;
+}
+
+.visualpay-overview .visualpay-dashboard__status-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--vp-text-dim);
+}
+
+.visualpay-overview .visualpay-dashboard__status-item b {
+  color: var(--vp-text);
+  font-weight: 700;
+}
+
+.visualpay-overview .visualpay-dashboard__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.visualpay-overview .visualpay-dashboard__status-dot.is-pending {
+  background: var(--vp-yellow);
+}
+
+.visualpay-overview .visualpay-dashboard__status-dot.is-confirmed {
+  background: var(--vp-green);
+}
+
+.visualpay-overview .visualpay-dashboard__status-dot.is-cancelled {
+  background: var(--vp-red);
+}
+
+.visualpay-overview .visualpay-dashboard__coin-carousel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-viewport {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-track {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  transition: transform 0.28s ease;
+  will-change: transform;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-carousel .visualpay-dashboard__coin {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--vp-border);
+  border-radius: 8px;
+  background: var(--vp-bg-card);
+  color: var(--vp-text-dim);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-carousel.is-scrollable .visualpay-dashboard__coin-nav {
+  display: inline-flex;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-nav:hover:not(:disabled) {
+  border-color: var(--vp-accent);
+  color: var(--vp-accent);
+  background: var(--vp-accent-soft);
+}
+
+.visualpay-overview .visualpay-dashboard__coin-nav:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-nav .dashicons {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.visualpay-overview .visualpay-dashboard__coin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--vp-bg-card);
+  border: 1px solid var(--vp-border-soft);
+  border-radius: 11px;
+  padding: 10px 12px;
+  transition: border-color 0.15s, transform 0.15s;
+  min-width: 0;
+}
+
+.visualpay-overview .visualpay-dashboard__coin:hover {
+  border-color: var(--vp-accent);
+  transform: translateY(-1px);
+}
+
+.visualpay-overview .visualpay-dashboard__coin-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #0a0b0d;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--vp-text);
+}
+
+.visualpay-overview .visualpay-dashboard__coin-name span {
+  color: var(--vp-text-faint);
+  font-weight: 400;
+}
+
+.visualpay-overview .visualpay-dashboard__coin-net {
+  font-size: 11px;
+  color: var(--vp-text-faint);
+}
+
+.visualpay-overview .visualpay-dashboard__net-badge {
+  font-size: 10px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--vp-border);
+  color: var(--vp-text-dim);
+  display: inline-block;
+}
+
+.visualpay-overview .visualpay-dashboard__empty {
+  margin: 0;
+  color: var(--vp-text-dim);
+  font-size: 13px;
+}
+
+.visualpay-overview .visualpay-dashboard__empty-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.visualpay-overview .visualpay-dashboard__empty-icon {
+  color: #f5a623;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.visualpay-overview .visualpay-dashboard__empty a {
+  color: var(--vp-accent);
+}
+
+@media (max-width: 900px) {
+  .visualpay-overview .visualpay-dashboard__grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .visualpay-overview .visualpay-dashboard {
+    padding: 16px;
+  }
+
+  .visualpay-overview .visualpay-dashboard__grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.wp-admin .visualpay-overview.wrap {
+  overflow-x: hidden;
+}
+
+/* Settings page (dark theme) */
+/* WP reserves 65px under #wpbody-content for absolute #wpfooter — remove it here. */
+body.visualpay-admin-settings-screen #wpbody-content {
+  padding-bottom: 0;
+}
+
+body.visualpay-admin-settings-screen #wpfooter {
+  margin-top: 0;
+}
+
+/* Desktop: lock page — no horizontal or vertical scroll */
+@media screen and (min-width: 783px) {
+  html.visualpay-settings-no-scroll,
+  body.visualpay-admin-settings-screen.visualpay-settings-no-scroll {
+    overflow: hidden !important;
+    height: 100%;
+    max-height: 100%;
+  }
+
+  body.visualpay-admin-settings-screen #wpwrap {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  body.visualpay-admin-settings-screen #wpcontent {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-right: 20px;
+  }
+
+  body.visualpay-admin-settings-screen #wpbody {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  body.visualpay-admin-settings-screen #wpbody-content {
+    float: none;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-bottom: 0;
+  }
+
+  body.visualpay-admin-settings-screen #wpfooter {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .visualpay-settings-page.wrap {
+    margin: 12px 0 0;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - var(--wp-admin--admin-bar--height, 32px) - 12px - 40px);
+    max-height: calc(100vh - var(--wp-admin--admin-bar--height, 32px) - 12px - 40px);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .visualpay-settings-page .visualpay-settings-shell {
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    padding: 20px 22px;
+  }
+
+  .visualpay-settings-page .visualpay-dashboard__topbar {
+    margin-bottom: 16px;
+    flex-shrink: 0;
+  }
+
+  .visualpay-settings-page .visualpay-settings-form {
+    overflow: hidden;
+  }
+
+  .visualpay-settings-page .visualpay-settings-columns {
+    gap: 16px;
+    margin: 0 0 14px;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .visualpay-settings-page .visualpay-settings-form .visualpay-settings-row {
+    margin: 0 0 14px;
+    padding: 14px 16px;
+    gap: 14px;
+  }
+
+  .visualpay-settings-page .visualpay-settings-form .visualpay-settings-row--stack {
+    gap: 14px;
+  }
+
+  .visualpay-settings-page .visualpay-settings-footer {
+    padding-top: 8px;
+    flex-shrink: 0;
+  }
+
+  .visualpay-settings-page .visualpay-settings-form .description {
+    margin-top: 6px;
+    line-height: 1.35;
+  }
+
+  .visualpay-settings-page .visualpay-settings-form textarea.large-text {
+    min-height: 64px;
+    max-height: 72px;
+    resize: none;
+  }
+}
+
+.visualpay-settings-page.wrap {
+  margin-top: 12px;
+  margin-bottom: 0;
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--wp-admin--admin-bar--height, 32px) - 12px - 40px);
+}
+
+@media screen and (max-width: 782px) {
+  .visualpay-settings-page.wrap {
+    min-height: calc(100vh - var(--wp-admin--admin-bar--height, 46px) - 12px - 40px);
+  }
+}
+
+.visualpay-settings-page .visualpay-settings-shell {
+  width: 100%;
+  max-width: none;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse 70% 45% at 85% -10%, rgba(245, 166, 35, 0.06), transparent 60%), var(--vp-bg);
+  color: var(--vp-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  border-radius: var(--vp-radius);
+  padding: 28px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+.visualpay-settings-page .visualpay-dashboard__brand-text h1,
+.visualpay-settings-page .visualpay-dashboard__brand-text span {
+  color: inherit;
+}
+
+.visualpay-settings-page .visualpay-dashboard__brand-text h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--vp-text);
+}
+
+.visualpay-settings-page .visualpay-dashboard__brand-text span {
+  font-size: 12px;
+  color: var(--vp-text-dim);
+}
+
+.visualpay-settings-page .visualpay-settings-status-pill {
+  gap: 10px;
+}
+
+.visualpay-settings-page .visualpay-settings-status__label {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.visualpay-settings-page .visualpay-settings-status-pill.is-active .visualpay-settings-status__label {
+  color: var(--vp-text-dim);
+}
+
+.visualpay-settings-page .visualpay-settings-status-pill.is-inactive .visualpay-settings-status__label {
+  color: var(--vp-red);
+}
+
+.visualpay-settings-page .visualpay-settings-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.visualpay-settings-page .visualpay-settings-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.visualpay-settings-page .visualpay-settings-switch__track {
+  position: relative;
+  display: block;
+  width: 34px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(144, 152, 163, 0.35);
+  transition: background 0.2s ease;
+}
+
+.visualpay-settings-page .visualpay-settings-switch__track::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #f2f3f5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.visualpay-settings-page .visualpay-settings-switch input:checked + .visualpay-settings-switch__track {
+  background: var(--vp-green);
+}
+
+.visualpay-settings-page .visualpay-settings-switch input:checked + .visualpay-settings-switch__track::after {
+  transform: translateX(16px);
+}
+
+.visualpay-settings-page .visualpay-settings-switch input:focus-visible + .visualpay-settings-switch__track {
+  box-shadow: 0 0 0 2px rgba(245, 166, 35, 0.45);
+}
+
+.visualpay-settings-page .visualpay-settings-status-pill.is-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.visualpay-settings-page .visualpay-settings-switch input:disabled + .visualpay-settings-switch__track {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.visualpay-toast {
+  position: fixed;
+  right: 34px;
+  bottom: 49px;
+  z-index: 100001;
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--vp-border);
+  background: var(--vp-bg-panel);
+  color: var(--vp-text);
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.visualpay-toast[hidden] {
+  display: block !important;
+  visibility: hidden;
+}
+
+.visualpay-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.visualpay-toast.is-success {
+  border-color: rgba(52, 211, 153, 0.35);
+  background: var(--vp-green-soft);
+  color: var(--vp-green);
+}
+
+.visualpay-toast.is-error {
+  border-color: rgba(242, 84, 91, 0.35);
+  background: var(--vp-red-soft);
+  color: var(--vp-red);
+}
+
+.visualpay-settings-page .visualpay-settings-alert {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  border: 1px solid var(--vp-border);
+}
+
+.visualpay-settings-page .visualpay-settings-alert.is-success {
+  background: var(--vp-green-soft);
+  color: var(--vp-green);
+  border-color: rgba(52, 211, 153, 0.25);
+}
+
+.visualpay-settings-page .visualpay-settings-alert.is-error {
+  background: var(--vp-red-soft);
+  color: var(--vp-red);
+  border-color: rgba(242, 84, 91, 0.25);
+}
+
+.visualpay-settings-page .visualpay-settings-form {
+  width: 100%;
+  max-width: none;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.visualpay-settings-page .visualpay-settings-footer {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.visualpay-settings-page .visualpay-settings-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 22px;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.visualpay-settings-page .visualpay-settings-columns > .visualpay-settings-row {
+  margin: 0;
+  height: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+.visualpay-settings-page .visualpay-settings-form .visualpay-settings-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 28px;
+  max-width: none;
+  width: 100%;
+  margin: 0 0 22px;
+  padding: 16px 18px;
+  background: var(--vp-bg-panel);
+  border: 1px solid var(--vp-border);
+  border-radius: var(--vp-radius);
+  box-sizing: border-box;
+}
+
+.visualpay-settings-page .visualpay-settings-form .visualpay-settings-row--stack {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.visualpay-settings-page .visualpay-settings-field {
+  min-width: 0;
+}
+
+.visualpay-settings-page .visualpay-settings-field .regular-text,
+.visualpay-settings-page .visualpay-settings-field .large-text {
+  width: 100%;
+  max-width: 100%;
+}
+
+.visualpay-settings-page .visualpay-settings-form .visualpay-settings-row--toggle {
+  grid-template-columns: 1fr;
+}
+
+.visualpay-settings-page .visualpay-settings-col--full {
+  grid-column: 1 / -1;
+}
+
+.visualpay-settings-page .visualpay-settings-check {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.visualpay-settings-page .visualpay-settings-check input {
+  margin: 0 0 4px;
+  accent-color: var(--vp-accent);
+}
+
+.visualpay-settings-page .visualpay-settings-check__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--vp-text);
+}
+
+.visualpay-settings-page .visualpay-settings-check__hint {
+  font-size: 12px;
+  color: var(--vp-text-dim);
+}
+
+.visualpay-settings-page .visualpay-settings-label {
+  display: block;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--vp-text);
+}
+
+.visualpay-settings-page .visualpay-settings-label-hint {
+  font-weight: 500;
+  color: var(--vp-text-dim);
+}
+
+.visualpay-admin .visualpay-settings-label-hint {
+  font-weight: 500;
+  color: #646970;
+}
+
+.visualpay-settings-page .visualpay-required {
+  color: var(--vp-red);
+}
+
+.visualpay-settings-page .visualpay-settings-form .regular-text,
+.visualpay-settings-page .visualpay-settings-form .large-text {
+  width: 100%;
+  max-width: 100%;
+  background: var(--vp-bg-card);
+  border: 1px solid var(--vp-border);
+  color: var(--vp-text);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.visualpay-settings-page .visualpay-settings-form .regular-text:focus,
+.visualpay-settings-page .visualpay-settings-form .large-text:focus {
+  border-color: var(--vp-accent);
+  box-shadow: 0 0 0 1px var(--vp-accent);
+  outline: none;
+}
+
+.visualpay-settings-page .visualpay-settings-form .description {
+  margin-top: 8px;
+  color: var(--vp-text-faint);
+  font-size: 12px;
+}
+
+.visualpay-settings-page .visualpay-password-toggle {
+  color: var(--vp-text-dim);
+}
+
+.visualpay-settings-page .visualpay-password-toggle:hover,
+.visualpay-settings-page .visualpay-password-toggle:focus {
+  color: var(--vp-accent);
+  background: var(--vp-flat-bg);
+}
+
+.visualpay-settings-page .visualpay-settings-field__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 8px;
+}
+
+.visualpay-settings-page .visualpay-settings-field__header .visualpay-settings-label {
+  margin: 0;
+}
+
+.visualpay-settings-page .visualpay-settings-actions {
+  margin-top: 12px;
+}
+
+.visualpay-settings-page .visualpay-settings-field__header .visualpay-settings-test-btn {
+  min-height: 28px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.visualpay-settings-page .visualpay-settings-test-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 16px;
+  border: 1px solid var(--vp-border);
+  border-radius: 8px;
+  background: var(--vp-bg-card);
+  color: var(--vp-text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.visualpay-settings-page .visualpay-settings-test-btn:hover:not(:disabled) {
+  border-color: var(--vp-accent);
+  color: var(--vp-accent);
+}
+
+.visualpay-settings-page .visualpay-settings-test-btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 34px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--vp-border);
+  background: var(--vp-bg-card);
+  color: var(--vp-text-dim);
+  font-size: 13px;
+  line-height: 1.4;
+  flex: 1 1 220px;
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert[hidden] {
+  display: none !important;
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert.is-success {
+  background: var(--vp-green-soft);
+  border-color: rgba(52, 211, 153, 0.25);
+  color: var(--vp-green);
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert.is-error {
+  background: var(--vp-red-soft);
+  border-color: rgba(242, 84, 91, 0.25);
+  color: var(--vp-red);
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert.is-loading {
+  background: var(--vp-flat-bg);
+  border-color: var(--vp-border);
+  color: var(--vp-text-dim);
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert__icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert.is-success .visualpay-settings-test-alert__icon,
+.visualpay-settings-page .visualpay-settings-test-alert.is-error .visualpay-settings-test-alert__icon {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert__title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert.is-success .visualpay-settings-test-alert__title,
+.visualpay-settings-page .visualpay-settings-test-alert.is-success .visualpay-settings-test-alert__content span {
+  color: var(--vp-green);
+}
+
+.visualpay-settings-page .visualpay-settings-test-alert.is-error .visualpay-settings-test-alert__title,
+.visualpay-settings-page .visualpay-settings-test-alert.is-error .visualpay-settings-test-alert__content span {
+  color: var(--vp-red);
+}
+
+.visualpay-settings-page .visualpay-settings-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #fdb813;
+  color: #100b02;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(253, 184, 19, 0.35);
+}
+
+.visualpay-settings-page .visualpay-settings-submit:hover {
+  background: #f0ad00;
+}
+
+@media (max-width: 782px) {
+  .visualpay-settings-page .visualpay-settings-columns,
+  .visualpay-settings-page .visualpay-settings-form .visualpay-settings-row {
+    grid-template-columns: 1fr;
+  }
+
+  .visualpay-settings-page .visualpay-settings-shell {
+    padding: 16px;
+  }
+}
+
+/* Transactions page */
+body.visualpay-admin-transactions-screen #wpbody-content {
+  padding-bottom: 0;
+}
+
+body.visualpay-admin-transactions-screen #wpfooter {
+  margin-top: 0;
+}
+
+/* Desktop: lock page — no horizontal or vertical document scroll */
+@media screen and (min-width: 783px) {
+  html.visualpay-transactions-no-scroll,
+  body.visualpay-admin-transactions-screen.visualpay-transactions-no-scroll {
+    overflow: hidden !important;
+    height: 100%;
+    max-height: 100%;
+  }
+
+  body.visualpay-admin-transactions-screen #wpwrap {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  body.visualpay-admin-transactions-screen #wpcontent {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-right: 20px;
+  }
+
+  body.visualpay-admin-transactions-screen #wpbody {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  body.visualpay-admin-transactions-screen #wpbody-content {
+    float: none;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-bottom: 0;
+  }
+
+  body.visualpay-admin-transactions-screen #wpfooter {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .visualpay-transactions-page.wrap {
+    margin: 12px 0 0;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - var(--wp-admin--admin-bar--height, 32px) - 12px - 40px);
+    max-height: calc(100vh - var(--wp-admin--admin-bar--height, 32px) - 12px - 40px);
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .visualpay-transactions-page .visualpay-dashboard,
+  .visualpay-transactions-page .visualpay-transactions-shell {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    padding: 20px 22px;
+  }
+
+  .visualpay-transactions-page .visualpay-dashboard__topbar {
+    margin-bottom: 16px;
+    flex-shrink: 0;
+  }
+
+  .visualpay-transactions__form {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .visualpay-transactions__toolbar {
+    flex-shrink: 0;
+    margin-bottom: 14px;
+  }
+
+  .visualpay-transactions__panel {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .visualpay-transactions__table-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions thead th {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: #121418 !important;
+    background-color: #121418 !important;
+    box-shadow: 0 1px 0 var(--vp-border);
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions th,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .visualpay-transactions__tablenav {
+    flex-shrink: 0;
+  }
+}
+
+.visualpay-transactions-page.wrap {
+  margin-top: 12px;
+  margin-bottom: 0;
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.visualpay-transactions-page .visualpay-dashboard {
+  width: 99%;
+  max-width: none;
+  background: radial-gradient(ellipse 70% 45% at 85% -10%, rgba(245, 166, 35, 0.06), transparent 60%), var(--vp-bg);
+  color: var(--vp-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  border-radius: var(--vp-radius);
+  padding: 28px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.visualpay-transactions-page .mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.visualpay-transactions-page .visualpay-dashboard__mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--vp-bg-card);
+  border: 1px solid var(--vp-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--vp-text-dim);
+  font-size: 16px;
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
+.visualpay-transactions-page .visualpay-transactions__brand-text h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--vp-text);
+}
+
+.visualpay-transactions-page .visualpay-transactions__brand-text span {
+  font-size: 12.5px;
+  color: var(--vp-text-faint);
+}
+
+.visualpay-transactions-page .visualpay-dashboard__pill.is-disconnected {
+  text-decoration: none;
+}
+
+.visualpay-transactions__form {
+  margin: 0;
+}
+
+.visualpay-transactions__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.visualpay-transactions__tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--vp-bg-panel);
+  border: 1px solid var(--vp-border);
+  border-radius: 11px;
+  padding: 5px;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+.visualpay-transactions__tab {
+  font-size: 12.5px;
+  color: var(--vp-text-dim);
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.visualpay-transactions__tab:hover {
+  color: var(--vp-text);
+}
+
+.visualpay-transactions__tab.is-active {
+  background: var(--vp-bg-card);
+  color: var(--vp-text);
+  box-shadow: inset 0 0 0 1px var(--vp-border);
+}
+
+.visualpay-transactions__tab-count {
+  color: var(--vp-text-faint);
+  font-weight: 500;
+}
+
+.visualpay-transactions__tab.is-active .visualpay-transactions__tab-count {
+  color: var(--vp-accent);
+}
+
+.visualpay-transactions__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.visualpay-transactions__search input[type="search"] {
+  background: var(--vp-bg-card);
+  border: 1px solid var(--vp-border);
+  color: var(--vp-text);
+  border-radius: 9px;
+  padding: 9px 12px;
+  font-size: 13px;
+  min-width: 260px;
+  box-shadow: none;
+}
+
+.visualpay-transactions__search input[type="search"]::placeholder {
+  color: var(--vp-text-faint);
+}
+
+.visualpay-transactions__search input[type="search"]:focus {
+  border-color: var(--vp-accent);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--vp-accent);
+}
+
+.visualpay-transactions__search-btn {
+  background: var(--vp-accent-soft);
+  border: 1px solid var(--vp-accent);
+  color: var(--vp-accent);
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 9px;
+  padding: 9px 18px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.visualpay-transactions__search-btn:hover {
+  background: rgba(245, 166, 35, 0.22);
+}
+
+.visualpay-transactions__panel {
+  background: var(--vp-bg-panel);
+  border: 1px solid var(--vp-border);
+  border-radius: var(--vp-radius);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 783px) {
+  .visualpay-transactions__panel {
+    overflow: hidden;
+  }
+}
+
+.visualpay-transactions__table-scroll {
+  min-width: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.visualpay-transactions-page .visualpay-transactions__panel .tablenav {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  background: transparent;
+  clear: both;
+}
+
+.visualpay-transactions-page .visualpay-transactions__panel .tablenav.top {
+  display: none;
+}
+
+.visualpay-transactions-page .visualpay-transactions__panel .tablenav.visualpay-transactions__tablenav,
+.visualpay-transactions__tablenav {
+  border-top: 1px solid var(--vp-border-soft);
+  margin: 0;
+  padding: 18px 16px;
+  min-height: 0;
+}
+
+.visualpay-transactions__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.visualpay-transactions__pagination-summary {
+  font-size: 12px;
+  color: var(--vp-text-dim);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.visualpay-transactions__pagination-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.visualpay-transactions__pagination-links a,
+.visualpay-transactions__pagination-links span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--vp-border);
+  border-radius: 8px;
+  background: var(--vp-bg-card);
+  color: var(--vp-text-dim);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.visualpay-transactions__pagination-links a:hover {
+  border-color: var(--vp-accent);
+  color: var(--vp-accent);
+  background: var(--vp-accent-soft);
+}
+
+.visualpay-transactions__pagination-links span.current {
+  border-color: var(--vp-accent);
+  color: var(--vp-accent);
+  background: var(--vp-accent-soft);
+}
+
+.visualpay-transactions__pagination-links span.dots {
+  min-width: auto;
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  color: var(--vp-text-faint);
+}
+
+.visualpay-transactions-page .visualpay-transactions__panel .tablenav-pages {
+  display: none;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  border: 0;
+  background: var(--vp-bg-panel);
+  box-shadow: none;
+  table-layout: fixed;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-order_id {
+  width: 8%;
+  min-width: 0;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-usdt_amount {
+  width: 11%;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-status {
+  width: 11%;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-tx_id {
+  width: 12%;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-currency_symbol {
+  width: 13%;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-network_name {
+  width: 15%;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-tracking_code {
+  width: 14%;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-created_at {
+  width: 16%;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions.widefat.striped tbody tr,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions.widefat.striped tbody td {
+  background: transparent;
+  box-shadow: none;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions.widefat.striped tbody tr:nth-child(odd) td,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions.widefat.striped tbody tr:nth-child(even) td {
+  background: transparent;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions tfoot th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--vp-text-dim);
+  font-weight: 700;
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--vp-border);
+  border-top: 0;
+  background: #121418 !important;
+  background-color: #121418 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sortable,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.asc,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.desc {
+  background: #121418 !important;
+  background-color: #121418 !important;
+  padding: 0;
+  overflow: visible;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sortable a,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px;
+  float: none;
+  overflow: visible;
+  padding: 12px 10px;
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sortable a span,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted a span {
+  float: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th .sorting-indicators {
+  display: inline-grid;
+  flex-shrink: 0;
+  margin-left: 2px;
+  color: var(--vp-text-faint);
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th .sorting-indicator {
+  display: block;
+  width: 10px;
+  height: 4px;
+  margin-top: 4px;
+  margin-left: 0;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th .sorting-indicator:before {
+  color: var(--vp-text-faint);
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.asc .sorting-indicator.asc:before,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.desc .sorting-indicator.desc:before {
+  color: var(--vp-text);
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.asc:hover .sorting-indicator.asc:before,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.desc:hover .sorting-indicator.desc:before,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.asc a:focus .sorting-indicator.asc:before,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.desc a:focus .sorting-indicator.desc:before {
+  color: var(--vp-text-faint);
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.asc:hover .sorting-indicator.desc:before,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.desc:hover .sorting-indicator.asc:before,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.asc a:focus .sorting-indicator.desc:before,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th.sorted.desc a:focus .sorting-indicator.asc:before {
+  color: var(--vp-text);
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions tfoot {
+  display: none;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th a:hover {
+  color: var(--vp-accent);
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions thead th .sorting-indicators {
+  color: var(--vp-text-faint);
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions tbody td {
+  padding: 12px 10px;
+  font-size: 13px;
+  color: var(--vp-text);
+  border-bottom: 1px solid var(--vp-border-soft);
+  border-top: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  background: transparent !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-created_at {
+  font-size: 12px;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-currency_symbol .visualpay-transactions__currency,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-network_name .visualpay-transactions__currency {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-currency_symbol .visualpay-transactions__currency > span:last-child,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-network_name .visualpay-transactions__currency > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-tracking_code .visualpay-transactions__copy-cell,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-tx_id .visualpay-transactions__copy-cell {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-tracking_code .visualpay-transactions__tracking,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-tx_id .visualpay-transactions__tx-id {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-created_at,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions .column-created_at .visualpay-transactions__created {
+  white-space: nowrap;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions tbody tr:nth-child(even) td {
+  background: var(--vp-bg-row-alt) !important;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions tbody tr:hover td {
+  background: var(--vp-accent-soft) !important;
+}
+
+.visualpay-transactions-page .wp-list-table.visualpay-transactions tbody tr.no-items td,
+.visualpay-transactions-page .wp-list-table.visualpay-transactions tbody tr.no-items:hover td {
+  text-align: center;
+  color: var(--vp-text) !important;
+  background: var(--vp-bg-panel) !important;
+  padding: 34px 16px;
+}
+
+.visualpay-transactions-page .visualpay-transactions tbody tr {
+  cursor: pointer;
+}
+
+.visualpay-transactions__order-link {
+  color: var(--vp-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.visualpay-transactions__order-link:hover {
+  text-decoration: underline;
+}
+
+.visualpay-transactions__badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.visualpay-transactions__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.visualpay-transactions__badge--pending {
+  color: var(--vp-yellow);
+  background: var(--vp-yellow-soft);
+}
+
+.visualpay-transactions__badge--pending .visualpay-transactions__badge-dot {
+  background: var(--vp-yellow);
+}
+
+.visualpay-transactions__badge--confirmed {
+  color: var(--vp-green);
+  background: var(--vp-green-soft);
+}
+
+.visualpay-transactions__badge--confirmed .visualpay-transactions__badge-dot {
+  background: var(--vp-green);
+}
+
+.visualpay-transactions__badge--cancelled {
+  color: var(--vp-red);
+  background: var(--vp-red-soft);
+}
+
+.visualpay-transactions__badge--cancelled .visualpay-transactions__badge-dot {
+  background: var(--vp-red);
+}
+
+.visualpay-transactions__badge--expired {
+  color: var(--vp-gray);
+  background: var(--vp-gray-soft);
+}
+
+.visualpay-transactions__badge--expired .visualpay-transactions__badge-dot {
+  background: var(--vp-gray);
+}
+
+.visualpay-transactions__currency {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.visualpay-transactions__currency-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+  color: #0a0b0d;
+}
+
+.visualpay-transactions__asset-icon-wrap {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visualpay-transactions__asset-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+.visualpay-transactions__copy-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.visualpay-transactions__copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--vp-text-faint);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.visualpay-transactions__copy-btn .dashicons {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
+
+.visualpay-transactions__copy-btn:hover,
+.visualpay-transactions__copy-btn:focus {
+  color: var(--vp-accent);
+  background: rgba(245, 166, 35, 0.1);
+  outline: none;
+}
+
+.visualpay-transactions__copy-btn.is-copied {
+  color: var(--vp-green);
+}
+
+.visualpay-transactions__tx-id,
+.visualpay-transactions__tracking {
+  color: var(--vp-text-faint);
+  font-size: 12px;
+}
+
+.visualpay-transactions__tx-id {
+  text-decoration: none;
+}
+
+.visualpay-transactions__tx-id:hover {
+  color: var(--vp-accent);
+}
+
+.visualpay-transactions__usd {
+  font-weight: 700;
+}
+
+.visualpay-transactions__created {
+  color: var(--vp-text-dim);
+  font-size: 12.5px;
+}
+
+.visualpay-transactions__muted {
+  color: var(--vp-text-faint);
+}
+
+@media screen and (max-width: 782px) {
+  .visualpay-transactions-page .visualpay-dashboard {
+    padding: 16px;
+  }
+
+  .visualpay-transactions__panel {
+    overflow: hidden;
+  }
+
+  .visualpay-transactions__table-scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  /* Disable WP responsive list-table (flex rows + toggle) */
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions thead,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions tbody,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions tfoot {
+    display: table-header-group;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions tbody {
+    display: table-row-group;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions tfoot {
+    display: table-footer-group;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions tr {
+    display: table-row;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions .column-primary .toggle-row {
+    display: none !important;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions td.column-primary,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions th.column-primary,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions tbody th.column-primary {
+    padding-right: 10px !important;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions tr:not(.inline-edit-row):not(.no-items) td:not(.check-column)::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Mobile: only Order, USD, Status — override WP sibling hide */
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions th.column-order_id,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions td.column-order_id,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions th.column-usdt_amount,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions td.column-usdt_amount,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions th.column-status,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions td.column-status {
+    display: table-cell !important;
+    position: static;
+    padding: 12px 10px !important;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions th.column-tx_id,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions td.column-tx_id,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions th.column-currency_symbol,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions td.column-currency_symbol,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions th.column-network_name,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions td.column-network_name,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions th.column-tracking_code,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions td.column-tracking_code,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions th.column-created_at,
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions td.column-created_at {
+    display: none !important;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions .column-order_id {
+    width: 28%;
+    min-width: 0;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions .column-usdt_amount {
+    width: 36%;
+  }
+
+  .visualpay-transactions-page .wp-list-table.visualpay-transactions .column-status {
+    width: 36%;
+  }
+
+  .visualpay-transactions__search {
+    width: 100%;
+  }
+
+  .visualpay-transactions__search input[type="search"] {
+    min-width: 0;
+    flex: 1;
+  }
+}

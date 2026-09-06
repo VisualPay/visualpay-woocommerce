@@ -1,0 +1,27 @@
+# Local / internal
+stuff/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors & IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+ehthumbs.db
+
+# Env / secrets
+.env
+.env.*
+*.pem
+
+# Logs & temp
+*.log
+tmp/
+temp/
+*.zip
+!screenshots/**
