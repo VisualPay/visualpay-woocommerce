@@ -493,8 +493,10 @@
     }
   }
 
-  function showFailed(message) {
+  function showFailed(message, review) {
     stopStatusChecks();
+    $("#modalFailed h2").text(review ? cfg.i18n.reviewTitle : cfg.i18n.failedTitle);
+    $("#failedRetryBtn").toggle(!review);
     $("#failedMessage").text(message || cfg.i18n.cancelled);
     showModalView("failed");
     if (!$("#paymentModal").hasClass("show")) paymentModal.show();
@@ -503,9 +505,14 @@
   function handleStatusData(data) {
     if (!data || statusResolved) return;
     currentTx = Object.assign({}, currentTx || {}, data);
-    const status = (data.status || data.normalized_status || "").toLowerCase();
+    const status = (data.normalized_status || data.status || "").toLowerCase();
 
-    if (status === "confirmed") {
+    if (status === "manual_review") {
+      showFailed(cfg.i18n.reviewMessage, true);
+      return;
+    }
+
+    if (status === "confirmed" && data.is_paid === true) {
       showSuccess(data);
       return;
     }
