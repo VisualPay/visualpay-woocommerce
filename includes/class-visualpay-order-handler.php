@@ -24,6 +24,9 @@ class VisualPay_Order_Handler {
 	const META_STATUS     = '_visualpay_status';
 	const META_RESPONSE   = '_visualpay_response';
 	const META_EXPECTED   = '_visualpay_expected_amount';
+	const META_TOLERANCE  = '_visualpay_tolerance_percent';
+	const META_CREATE_USD = '_visualpay_create_usd';
+	const META_REVIEW     = '_visualpay_payment_review';
 	const META_BASE       = '_visualpay_base_amount';
 	const META_FEE        = '_visualpay_network_fee';
 	const META_LOCKED_USD = '_visualpay_locked_usd';
@@ -44,6 +47,9 @@ class VisualPay_Order_Handler {
 	 * @return bool
 	 */
 	public static function is_payable( WC_Order $order ) {
+		if ( $order->get_meta( self::META_REVIEW ) ) {
+			return false;
+		}
 		if ( 'visualpay' !== $order->get_payment_method() ) {
 			return false;
 		}
@@ -126,6 +132,9 @@ class VisualPay_Order_Handler {
 		$order->update_meta_data( self::META_WALLET, isset( $data['wallet_address'] ) ? $data['wallet_address'] : '' );
 		$order->update_meta_data( self::META_USDT, isset( $data['usdt_amount'] ) ? $data['usdt_amount'] : '' );
 		$order->update_meta_data( self::META_EXPECTED, isset( $data['expected_amount'] ) ? $data['expected_amount'] : '' );
+		$order->update_meta_data( self::META_TOLERANCE, isset( $data['payment_tolerance_percent'] ) ? $data['payment_tolerance_percent'] : 0 );
+		$order->update_meta_data( self::META_CREATE_USD, isset( $data['usdt_amount'] ) ? $data['usdt_amount'] : self::get_amount_usd( $order ) );
+		$order->delete_meta_data( self::META_REVIEW );
 		$order->update_meta_data( self::META_BASE, isset( $data['base_amount'] ) ? $data['base_amount'] : '' );
 		$order->update_meta_data( self::META_FEE, isset( $data['network_fee'] ) ? $data['network_fee'] : '' );
 		$order->update_meta_data( self::META_RESPONSE, wp_json_encode( $data ) );
@@ -160,10 +169,19 @@ class VisualPay_Order_Handler {
 		$resp_order_id  = isset( $data['order_id'] ) ? absint( $data['order_id'] ) : 0;
 
 		if ( $known_tracking && $resp_tracking && ! hash_equals( $known_tracking, $resp_tracking ) ) {
-			return $status ? $status : 'mismatch';
+			return 'mismatch';
 		}
 		if ( $resp_order_id && (int) $resp_order_id !== (int) $order->get_id() ) {
-			return $status ? $status : 'mismatch';
+			return 'mismatch';
+		}
+
+		if ( 'confirmed' === $status && ! $order->is_paid() && ! self::payment_covers_order( $order, $data ) ) {
+			$status = 'manual_review';
+			$data['status'] = $status;
+			if ( ! $order->get_meta( self::META_REVIEW ) ) {
+				$order->add_order_note( __( 'VisualPay payment requires manual review: the paid amount is missing, invalid or below the amount required. The order remains unpaid.', 'visualpay-for-woocommerce' ) );
+				$order->update_meta_data( self::META_REVIEW, 1 );
+			}
 		}
 
 		$order->update_meta_data( self::META_STATUS, $status );
@@ -206,6 +224,7 @@ class VisualPay_Order_Handler {
 			// Only complete when we have a tracking code tied to this order.
 			$tracking_ok = $known_tracking || $resp_tracking;
 			if ( $tracking_ok && ! $order->is_paid() ) {
+				$order->delete_meta_data( self::META_REVIEW );
 				$tx = ! empty( $data['tx_id'] ) ? $data['tx_id'] : '';
 				$order->payment_complete( $tx );
 				$order->add_order_note(
@@ -232,6 +251,28 @@ class VisualPay_Order_Handler {
 
 		$order->save();
 		return $status;
+	}
+
+	/**
+	 * Compare token amounts against the immutable creation snapshot, never a new quote.
+	 * Older invoices without a tolerance snapshot use zero percent.
+	 */
+	private static function payment_covers_order( WC_Order $order, array $data ) {
+		$expected = $order->get_meta( self::META_EXPECTED );
+		$paid     = isset( $data['paid_amount'] ) ? $data['paid_amount'] : null;
+		$usd      = $order->get_meta( self::META_CREATE_USD );
+		if ( '' === $usd || null === $usd ) {
+			$usd = $order->get_meta( self::META_LOCKED_USD );
+		}
+		// Only stablecoin legacy invoices may use the locked USD total as token units.
+		if ( '' === $expected || null === $expected ) {
+			$symbol = strtoupper( (string) $order->get_meta( self::META_CURRENCY ) );
+			if ( ! in_array( $symbol, array( 'USDT', 'USDC' ), true ) ) {
+				return false;
+			}
+			$expected = $usd;
+		}
+		return VisualPay_Security::amount_covers( $expected, $paid, $order->get_meta( self::META_TOLERANCE ), $usd );
 	}
 
 	/**

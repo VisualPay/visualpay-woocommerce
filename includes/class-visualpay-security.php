@@ -92,6 +92,32 @@ class VisualPay_Security {
 	}
 
 	/**
+	 * Whether a positive payment covers the expected token amount, including overpayment.
+	 * Convert the existing USD 0.05 allowance to token units using the creation quote.
+	 */
+	public static function amount_covers( $expected, $paid, $tolerance_percent = 0, $creation_usd = null ) {
+		foreach ( array( $expected, $paid ) as $amount ) {
+			if ( ! is_numeric( $amount ) || ! is_finite( (float) $amount ) || (float) $amount <= 0 ) {
+				return false;
+			}
+		}
+		if ( '' === $tolerance_percent || null === $tolerance_percent ) {
+			$tolerance_percent = 0;
+		}
+		if ( ! is_numeric( $tolerance_percent ) || ! is_finite( (float) $tolerance_percent )
+			|| (float) $tolerance_percent < 0 || (float) $tolerance_percent > 100 ) {
+			return false;
+		}
+		$expected = (float) $expected;
+		$allowed = $expected * ( (float) $tolerance_percent / 100 );
+		if ( is_numeric( $creation_usd ) && is_finite( (float) $creation_usd ) && (float) $creation_usd > 0 ) {
+			$allowed = max( $allowed, 0.05 * $expected / (float) $creation_usd );
+		}
+		// Relative epsilon handles binary floating-point boundaries without rounding small assets to zero.
+		return (float) $paid + $expected * 1.0e-12 >= $expected - $allowed;
+	}
+
+	/**
 	 * Resolve TTL minutes for create request.
 	 *
 	 * @param int $settings_ttl Plugin setting TTL.

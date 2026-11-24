@@ -258,6 +258,10 @@ class VisualPay_Payment_Page {
 			}
 		}
 
+		if ( $order->get_meta( VisualPay_Order_Handler::META_REVIEW ) ) {
+			wp_die( esc_html( VisualPay_I18n::t( 'payment_review_message' ) ), esc_html( VisualPay_I18n::t( 'payment_review_title' ) ), array( 'response' => 403 ) );
+		}
+
 		if ( ! VisualPay_Order_Handler::is_payable( $order ) ) {
 			wp_die( esc_html( VisualPay_I18n::t( 'order_not_payable' ) ), 403 );
 		}
