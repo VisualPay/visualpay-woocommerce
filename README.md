@@ -6,7 +6,9 @@
 
 Accept cryptocurrency payments in WooCommerce via the [VisualPay Merchant API](https://visualpay.net).
 
-**Plugin version:** 1.0.2
+**Plugin version:** 1.0.3
+
+Version 1.0.3 checks the paid amount before completing an order. Insufficient or invalid payments remain unpaid for manual review. The plugin preserves the original payment amount and tolerance and accepts valid overpayments.
 
 ## Screenshots
 
@@ -86,7 +88,7 @@ Payment page UI languages supported by this plugin. Documentation below is provi
 3. Amount is locked from the WooCommerce order total (sent as `amount_usd`)
 4. Customer picks coin + network and clicks **Pay Now**
 5. They pay the **`pay_amount`** shown (exact crypto amount) via QR or wallet address
-6. The plugin polls status; on `confirmed` the order is marked paid (`payment_complete`)
+6. The plugin polls status and checks that the confirmed payment covers the saved amount before marking the order paid (`payment_complete`). Insufficient or invalid payments remain unpaid for manual review.
 
 ### Admin menus
 

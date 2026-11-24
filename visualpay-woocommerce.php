@@ -3,7 +3,7 @@
  * Plugin Name: VisualPay for WooCommerce
  * Plugin URI: https://visualpay.net/woocommerce
  * Description: Accept cryptocurrency payments via VisualPay Merchant API in WooCommerce.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: VisualPay
  * Author URI: https://visualpay.net
  * Requires at least: 6.0
@@ -21,7 +21,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VISUALPAY_WC_VERSION', '1.0.2' );
+define( 'VISUALPAY_WC_VERSION', '1.0.3' );
 define( 'VISUALPAY_WC_FILE', __FILE__ );
 define( 'VISUALPAY_WC_PATH', plugin_dir_path( __FILE__ ) );
 define( 'VISUALPAY_WC_URL', plugin_dir_url( __FILE__ ) );

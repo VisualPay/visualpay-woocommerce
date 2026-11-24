@@ -13,6 +13,7 @@ package-lock.json
 phpunit.xml
 phpunit.xml.dist
 tests
+graphify-out
 bin
 .editorconfig
 .eslintrc

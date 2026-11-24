@@ -4,7 +4,7 @@ Tags: woocommerce, cryptocurrency, payments, crypto, checkout
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,10 @@ No analytics, ads, or unrelated third-party tracking scripts are loaded by this 
 
 == Changelog ==
 
+= 1.0.3 =
+* Check the paid amount before completing orders. Hold insufficient or invalid payments for manual review.
+* Preserve the original payment amount and tolerance, and accept valid overpayments.
+
 = 1.0.2 =
 * Update bundled Bootstrap from 5.3.3 to 5.3.8 (JS + CSS)
 * Update bundled qrcode (node-qrcode) from 1.5.1 to 1.5.4
@@ -106,6 +110,9 @@ No analytics, ads, or unrelated third-party tracking scripts are loaded by this 
 * Document external VisualPay API usage and third-party libraries
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+Security update: insufficient or invalid payments remain unpaid for manual review. Existing invoices without a saved tolerance use zero percent.
 
 = 1.0.2 =
 Updates bundled Bootstrap and qrcode libraries to the latest stable versions.
